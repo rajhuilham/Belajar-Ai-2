@@ -27,6 +27,8 @@ h1 {
   border-radius: 5px;
   background-color: #fafafa;
   margin-bottom: 10px;
+  display: flex; /* Added flexbox */
+  flex-direction: column; /* Stack messages vertically */
 }
 
 .message {
@@ -34,19 +36,19 @@ h1 {
   padding: 8px 12px;
   border-radius: 20px;
   max-width: 80%;
-  display: inline-block;
+  /* Removed display: inline-block; flex items are block by default */
 }
 
 .message.user {
   background-color: #d1e7ff;
-  float: right;
-  text-align: right;
+  align-self: flex-end; /* Align to the right in flex container */
+  /* Removed float: right and text-align: right */
 }
 
 .message.bot {
   background-color: #dff6dd;
-  float: left;
-  text-align: left;
+  align-self: flex-start; /* Align to the left in flex container */
+  /* Removed float: left and text-align: left */
 }
 
 form {
